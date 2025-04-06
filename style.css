@@ -1,0 +1,136 @@
+:root {
+  --background: #2b2d31;
+  --foreground: #ffffff;
+  --header: #5865f2;
+  --card-bg: #313338;
+  --muted-text: #b5bac1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "ABC Ginto Nord Condensed Unlicensed Trial", sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  padding: 40px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--header);
+  margin-bottom: 10px;
+}
+
+p.subtitle {
+  font-size: 1.2rem;
+  color: var(--muted-text);
+}
+
+section {
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--foreground);
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.tech-card {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 20px 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+}
+
+.tech-card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.tech-card span {
+  color: var(--muted-text);
+  font-size: 1rem;
+}
+
+.education-card {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.education-card p {
+  color: var(--muted-text);
+  line-height: 1.5;
+}
+
+.contact-links {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .contact-links {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--card-bg);
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: var(--muted-text);
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.contact-link:hover {
+  background: #404249;
+  color: var(--foreground);
+}
+
+.contact-link i {
+  font-size: 1.2rem;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted-text);
+  margin-top: 60px;
+}
